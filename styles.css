@@ -1,0 +1,234 @@
+/* General page styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3;
+}
+
+/* Hamburger menu */
+.menu-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-icon {
+    color: white;
+}
+
+/* Side menu (hidden by default) */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;                 
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #ddd;
+    color: White;
+}
+
+/* Main content */
+.main-content {
+    transition: margin-left .3s;
+    padding: 20px;
+
+}
+
+h1, h2, h3 {
+    color: #32a89e;
+    text-align: center;
+
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+
+}
+
+.images{
+    width: 2%;
+    height: 2%;
+    justify-content: center;
+    align-items:center;
+}
+
+/* Mobile responsive for the side menu */
+@media screen and (max-width: 600px) {
+    .menu-bar {
+        font-size: 25px;
+    }
+
+    .side-menu a {
+        font-size: 20px;
+    }
+}
+
+/* Container Styling */
+.container {
+    background: rgba(0, 0, 128, 0.5);
+    padding: 20px;
+    border-radius: 80px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fade-in 1s ease-in-out;
+    transform: translate(125%,5%);
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ddd;
+}
+
+form button {
+    background: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #6a11cb;
+}
+
+/* Links */
+a {
+    color: #9fd3fb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.none{
+color: White;
+}
+.none1{
+color: White;
+}
+/* Page Transition Styles */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 10s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Cubic bezier for smooth transition */
+}
+
+/* Show the transition effect when active */
+.page-transition.active {
+    opacity: 1;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Video Background */
+.video-background {
+    position: fixed; /* Changed to fixed to keep the video in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Keeps the video behind the content */
+}
+
+#bg-video {
+    object-fit: cover; /* Ensures the video covers the entire background */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Content Styling */
+.content {
+    position: relative;  /* So the text appears over the video */
+    z-index: 1;  /* Ensures the content stays on top of the video */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Optional: Add a semi-transparent overlay to make text more readable */
+.video-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Dark semi-transparent overlay */
+    z-index: -1;  /* Ensure overlay goes behind content */
+}
+.blue{
+color: gold;
+}
+.white{
+color: white;
+text-align: left;
+}
+.h{
+color: white;
+background-color: blue;
+font-size: x-large;
+}
+.green{
+
+}
+.I{
+font-size: x-large;
+text-align: left;
+}
